@@ -112,8 +112,7 @@ async function borrowedVaults(api) {
 // get Credbull DeFi vaults
 async function getVaultsForChain(chain) {
   // v1 vaults (e.g. inCredbull Earn)
-  // const v1Vaults = (await getConfig('credbull', "https://incredbull.io/api/vaults"))[chain] || [];
-  const v1Vaults = (await getConfig('credbull', "https://incredbull-vault-credbull.vercel.app/api/vaults"))[chain] || [];
+  const v1Vaults = (await getConfig('credbull', "https://incredbull.io/api/vaults"))[chain] || [];
   // v2 vaults (e.g. LiquidStone X Plume)
   const v2Vaults = addresses[chain]?.v2Vaults || [];
 
