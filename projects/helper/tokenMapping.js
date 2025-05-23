@@ -81,7 +81,10 @@ const fixBalancesTokens = {
     '0x88f08e304ec4f90d644cec3fb69b8ad414acf884': { coingeckoId: 'usd-coin', decimals: 6, },
     '0xe5ecd226b3032910ceaa43ba92ee8232f8237553': { coingeckoId: 'ethereum', decimals: 18, },
     '0xb0588f9a9cade7cd5f194a5fe77acd6a58250f82': { coingeckoId: 'bonsai-token', decimals: 18, },
-  }
+  },
+  plume_mainnet: {
+    '0x78add880a697070c1e765ac44d65323a0dcce913': { coingeckoId: "usd-coin", decimals: 6 }, // USDC.e (Bridged via Stargate)
+  },
 }
 
 ibcChains.forEach(chain => fixBalancesTokens[chain] = { ...ibcMappings, ...(fixBalancesTokens[chain] || {}) })
